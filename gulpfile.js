@@ -11,6 +11,12 @@ var port = 6600,
 require('gulp-param');
 var reload = browserSync.reload;
 
+//plugin
+
+var sass = require('./gulp/scripts/html_pug.js'),
+    pug  = require('./gulp/scripts/sass.js');
+ 
+
 gulp.task('default', ['serve:dist'], function (callback) {
   // console.log(callback);
 });
@@ -24,6 +30,10 @@ gulp.task('serve:dist', ['fileinclude', 'watch'], function () {
       index: "index.html"
     }
   });
+  //watch sass
+  gulp.watch('', ['styles']).on('change', reload); //watch  sass
+  gulp.watch('', ['styles']).on('change', reload); //watch  sass
+
 });
 // package pure html, js, css to folder 'dist'
 gulp.task('fileinclude', ['pack_js', 'pack_plugin'], function () {
@@ -39,6 +49,7 @@ gulp.task('fileinclude', ['pack_js', 'pack_plugin'], function () {
 // Set files to watch for updates
 gulp.task('watch', function () {
   gulp.watch(['./dev/app/html/*.html', './dev/js/*.js'], ['fileinclude']).on('change', reload);
+
 });
 
 // clean dist version

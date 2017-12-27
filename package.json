@@ -20,6 +20,12 @@
     "gulp-requirejs": "^1.0.0",
     "gulp-vueify": "0.0.3",
     "gulp-watch": "^4.3.11",
-    "vueify": "^9.4.1"
+    "vueify": "^9.4.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sourcemaps": "^2.5.0",
+    "gulp-file-include": "^1.0.0",
+    "gulp-plumber": "^1.1.0"
   }
 }
