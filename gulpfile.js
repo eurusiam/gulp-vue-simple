@@ -1,7 +1,6 @@
 
-var port = 6600,
-    gulp = require('gulp'),
-    browserSync = require('browser-sync'),
+var gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
     plumber = require('gulp-plumber'),
     watch = require('gulp-watch'),
     fileinclude = require('gulp-file-include'),
@@ -9,7 +8,9 @@ var port = 6600,
     clean = require('gulp-clean');
 
 require('gulp-param');
-var reload = browserSync.reload;
+
+var _port = 6600,
+    reload = browserSync.reload;
 
 //plugin
 
@@ -23,8 +24,8 @@ gulp.task('default', ['serve:dist'], function (callback) {
 
 // Start the server with dist files.
 gulp.task('serve:dist', ['fileinclude', 'watch'], function () {
-  browserSync({
-    port: port,
+  browserSync.init({
+    port: _port,
     server: {
       baseDir: 'dist',
       index: "index.html"
