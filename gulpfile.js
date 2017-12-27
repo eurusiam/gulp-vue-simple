@@ -1,10 +1,8 @@
-
 var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     plumber = require('gulp-plumber'),
     watch = require('gulp-watch'),
     fileinclude = require('gulp-file-include'),
-    rjs = require('gulp-requirejs'),
     clean = require('gulp-clean');
 
 require('gulp-param');
