@@ -1,27 +1,79 @@
 # gulp-vue-simple
+# 專案說明
+## 目錄結構
+現有專案目錄結構表列如下：
+```
+dev
+    style
+    image
+    view
+    script
+design
+    ....
+dist
+    css
+    img
+    js
+    font
+gulp
+    gulpfile.dev.js
+    gulpfile.desgin.js
+bower.json
+package.json
+README.md
+.gitignore
+.bowerrc
+```
+## 結構說明
 
-##  package.json
+- dev 前端團隊開發主目錄
+-- style 樣式表目錄，亦為團隊產出的css樣式表
+-- view 頁面目錄，亦為團隊產出的html頁面
+-- script javascript目錄，為前端團隊開發核心目錄
+- design UI設計團隊主目錄
+-- (需design團隊協助補述)
+- dist 前端團隊產出目錄，亦為最後部署產品的內容物
+-- css css檔放置處
+-- img 圖片檔放置處
+-- js javascript檔放置處
+-- font 文字檔放置處(if necessary)
+- gulp gulp目錄檔
+-- gulpfile.js 為前端團隊主要gulpfile檔
+-- gulpfile.design.js 為UI設計團隊主要gulpfile檔
+- bower.json npm系統用於作套件依賴管理的json檔
+- package.json npm系統用於作套件依賴管理的json檔
+- README.md 
+- .gitignore git-commit至local repository所用之忽略清單
+- .bowerrc bower套件下載的定義檔
 
-### 新增加
-- "gulp-notify": "^3.0.0",
-- "gulp-pug": "^3.3.0",
-- "gulp-postcss": "^6.3.0",
-- "gulp-sourcemaps": "^2.5.0",
-- "gulp-file-include": "^1.0.0" ,
-- "gulp-plumber": "^1.1.0"
+## Gulp執行說明
 
-##  sass
+開啟瀏覽器
+```
+    gulp start
+```
 
-// 呼叫styles 指令
-`gulp.task('styles');`   
+以開發者模式開啟瀏覽器
+```
+    gulp start:dev
+```
 
-#### css會產生兩個資料夾  
-1. css / autoprefixer    
-2. css   
+啟用程式碼監看模式
+```
+    gulp watch
+```
+
+建置dev目錄所有程式碼並部署至對應目錄中
+```
+    gulp build
+```
+
+清除dist目錄下所有目錄及檔案
+```
+    gulp clean
+```
 
 
-##  pug
-// 呼叫compilePug 指令
-`gulp.task('compilePug');`
+
 
 
