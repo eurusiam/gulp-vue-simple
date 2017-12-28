@@ -16,6 +16,8 @@
     "browser-sync": "^2.18.13",
     "gulp-bower": "0.0.13",
     "gulp-clean": "^0.3.2",
+    "gulp-file-include": "^2.0.0",
+    "gulp-param": "^1.0.3",
     "gulp-plumber": "^1.1.0",
     "gulp-requirejs": "^1.0.0",
     "gulp-vueify": "0.0.3",
