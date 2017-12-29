@@ -1,5 +1,6 @@
-import Vue from 'vue/dist/vue.js';
-import $ from 'jquery/dist/jquery.js';
+import Vue from 'vue/dist/vue.min.js';  // must follow this pattery to import vuejs
+import $ from 'jquery';
+import utils from './utils.js';
 
 // register a component
 Vue.component('my-component', {
@@ -14,6 +15,7 @@ new Vue({
   },
   mounted:function () {
     console.log($);
+    console.log(utils.trim(' ABCDEFG     '));
   }
 });
 
