@@ -21,11 +21,12 @@ var gutil = require('gulp-util');
 
 var _port = 8080;
 
-// default task
+// default task, run a build task to deploy.
 gulp.task('default', function(cb) {
     gulp.start('build', cb);
 });
 
+// A build task which prepare
 gulp.task('build', function() {
     runSequence(
         // 'clean',
@@ -40,7 +41,7 @@ gulp.task('build', function() {
     );
 });
 
-gulp.task('start:dev', [], function () {
+gulp.task('start:dev', ['watch'], function () {
 
     gulp.watch([
         'dist/**/*',

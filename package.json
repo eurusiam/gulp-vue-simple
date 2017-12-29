@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp & gulp start",
-    "start:dev": "gulp watch & gulp start:dev"
+    "start:dev": "gulp start:dev"
   },
   "author": "",
   "license": "ISC",
