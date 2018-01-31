@@ -4,12 +4,16 @@ import utils from './utils.js';
 
 // register a component
 Vue.component('my-component', {
-  template: '<div>A custom component!</div>'
+  template: `<div>A custom component!
+              <br/>
+              <br/>
+              </div>`
 });
 
 // create an instance
 new Vue({
   el: '#app',
+
   data: {
       currentActivity: 'home'
   },

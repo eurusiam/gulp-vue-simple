@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- start: HEAD -->
+
+<head>
+    <title>templates</title>
+    <!-- start: META -->
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- end: META -->
+
+    <!-- start: MAIN CSS -->
+    <link rel="stylesheet" media="all" href="./assets/css/plugin/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/themify-icons/themify-icons.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/animate.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/perfect-scrollbar.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/switchery.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/bootstrap-slider.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/ladda-themeless.min.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/slick.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/slick-theme.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/flipclock.css">
+    <link rel="stylesheet" media="all" href="assets/css/plugin/jquery.bootstrap-touchspin.css">
+    <link rel="stylesheet" media="all" href="assets/css/ui.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="" />
+</head>
+<!-- end: HEAD -->
+
+<body>
+    <div id="app" class="lyt-2">
+        <div class="app-content">
+            <!-- end: TOP NAVBAR -->
+            <div class="main-content">
+                <div class="wrap-content container" id="container">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="panel panel-white no-radius">
+                            <div class="panel-wrapper">
+                                <div class="panel-body">
+                                    <div class="clock_area">
+                                        <div class="title">
+                                            <img src="./assets/images/ui.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="panel panel-white no-radius">
+                            <div class="panel-wrapper">
+                                <div class="panel-body">
+                                    <div class="clock_area">
+                                        <div class="title">
+                                            UI-Timer
+                                        </div>
+                                        <div class="your-clock"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- start: MAIN JAVASCRIPTS -->
+    <!-- jquery 要用2.24版本的 不能用到3的-->
+    <script type="text/javascript" src="assets/js/plugin/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/modernizr.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/js.cookie.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/jquery.fullscreen-min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/switchery.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/jquery.knob.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/bootstrap-slider.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/jquery-numerator.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/spin.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/ladda.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/ladda.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/jquery.bootstrap-touchspin.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/TweenMax.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugin/flipclock.js"></script>
+
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <!-- start: Packet JAVASCRIPTS -->
+    <script src="assets/js/letter-icons.js"></script>
+    <script src="assets/js/windowSize.js"></script>
+    <script src="assets/js/marquee.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <!-- end: Packet JAVASCRIPTS -->
+    <!-- start: JavaScript Event Handlers for this page -->
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+        });
+
+        $("input[name='multiple']").TouchSpin({
+            initval: 1
+        });
+    </script>
+
+
+    <!-- end: JavaScript Event Handlers for this page -->
+</body>
+
+</html>

@@ -4,20 +4,27 @@
 現有專案目錄結構表列如下：
 ```
 dev
-    style
-    image
-    view
-    script
+  |__fonts
+  |__images
+  |__style
+  |__script
+  |__view
+
 design
     ....
+
 dist
-    css
-    img
-    js
-    font
+  |__css
+  |   |__assets
+  |   |__fonts
+  |   |__images
+  |
+  |__js
+      |__assets
+
 gulp
-    gulpfile.dev.js
-    gulpfile.desgin.js
+  |__scripts
+
 bower.json
 package.json
 README.md
@@ -26,53 +33,65 @@ README.md
 ```
 ## 結構說明
 
-- dev 前端團隊開發主目錄 
-    - style 樣式表目錄，亦為團隊產出的css樣式表
-    - view 頁面目錄，亦為團隊產出的html頁面
-    - script javascript目錄，為前端團隊開發核心目錄
-- design UI設計團隊主目錄
-    - (需design團隊協助補述)
-    - ...族繁不及備載...
-- dist 前端團隊產出目錄，亦為最後部署產品的內容物
-    - css css檔放置處
-    - img 圖片檔放置處
-    - js javascript檔放置處
-    - font 文字檔放置處(if necessary)
-- gulp gulp目錄檔
-    - gulpfile.js 為前端團隊主要gulpfile(或備份)檔
-    - ...族繁不及備載...
-- bower.json npm系統用於作套件依賴管理的json檔
-- package.json npm系統用於作套件依賴管理的json檔
-- .gitignore git-commit至local repository所用之忽略清單
-- .bowerrc bower套件下載的定義檔
+- dev...............前端團隊開發主目錄 
+    - fonts.........ttf  <ui>
+    - images........imgs <ui>
+    - style ........css  <fe>
+    -   |__design...css  <ui>
+    - script........js   <fe>
+    -   |__design...js   <ui>
+    - view .........html <fe>
+    -   |__modules..html <fe>
+
+- design ...........UI設計團隊主目錄
+    - ..............(需design團隊協助補述)
+    - ...............族繁不及備載...
+
+- dist .............html <整體前端總產出目錄，亦為最後部署產品的內容物>
+    - css ..........css <ui & fe>
+    -   |__assets...css <ui>
+    -   |__fonts....ttf <ui>
+    -   |__images...imgs<ui>
+    - js............js  <fe>
+    -   |__assets...js  <ui>
+
+- gulp .............gulp目錄
+    |__scripts......js <gulp tasks>
+
+- gulpfile.js.......gulp動作控制設定
+- bower.json........npm系統用於作套件依賴管理的json檔
+- package.json......npm系統用於作套件依賴管理的json檔
+- .gitignore........git-commit至local repository所用之忽略清單
+- .bowerrc..........bower套件下載的定義檔
 - README.md 
 
 ## Gulp執行說明
 
-開啟瀏覽器
+**第一次運行，應先執行  ``gulp start:all``
+**第二次運行以後，可執行  ``gulp / gulp start:fe``
+
+以前端開發模式開啟瀏覽器<只有FE更動更新>
 ```
-    gulp start
+    gulp / gulp start:fe
 ```
 
-以開發者模式開啟瀏覽器
+以開發模式開啟瀏覽器<包含UI&FE更動>
 ```
-    gulp start:dev
-```
-
-啟用程式碼監看模式
-```
-    gulp watch
+    gulp start:all
 ```
 
-建置dev目錄所有程式碼並部署至對應目錄中
+建置dev目錄所有程式碼並部署至對應目錄中 / FE對應目錄 / UI對應目錄
 ```
-    gulp build
+    gulp build / gulp build-fe / gulp build-ui
 ```
 
-清除dist目錄下所有目錄及檔案
+清除dist目錄下所有目錄及檔案 / FE檔案相關 / UI相關檔案
 ```
-    gulp clean
+    gulp clean / gulp clean-fe / gulp clean-ui
 ```
+
+
+
 
 
 

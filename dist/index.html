@@ -1,16 +1,97 @@
 <html>
-
 <head>
-  <link rel="stylesheet" media="all" href="./css/style1.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="" name="description" />
+  <meta content="" name="author" />
+  <title>gulp-vue-simple</title>
+        <!-- FE:CSS -->
+        <link rel="stylesheet" media="all" href="./css/demo.css">
+
+        <!-- UI:CSS -->
+        <link rel="stylesheet" media="all" href="./css/demo.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/bootstrap.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/themify-icons/themify-icons.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/animate.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/perfect-scrollbar.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/switchery.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/bootstrap-slider.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/ladda-themeless.min.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/slick.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/slick-theme.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/flipclock.css"><link rel="stylesheet" media="all" href="./css/assets/plugin/jquery.bootstrap-touchspin.css"><link rel="stylesheet" media="all" href="./css/assets/ui.css">
 </head>
 
 <body>
-    <div id="app">
-      <h1>{{currentActivity}}</h1>
-      <my-component></my-component>
+  <div id="app" class="lyt-2">
+    <h1>{{currentActivity}}</h1>
+    <my-component></my-component>
+    <div class="app-content">
+      <!-- end: TOP NAVBAR -->
+      <div class="main-content">
+        <div class="wrap-content container" id="container">
+          <div class="col-md-12 col-lg-6">
+            <div class="panel panel-white no-radius">
+              <div class="panel-wrapper">
+                <div class="panel-body">
+                  <div class="clock_area">
+                    <div class="title">
+                      <img src="./css/images/ui.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <div class="panel panel-white no-radius">
+              <div class="panel-wrapper">
+                <div class="panel-body">
+                  <div class="clock_area">
+                    <div class="title">
+                      UI-Timer
+                    </div>
+                    <div class="your-clock"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript"  src="./js/index.js"></script>
+  </div>
+  
+  <!-- FE:JS -->
+  <script type="text/javascript"  src="./js/index.js"></script>
 
+
+  <!-- UI:JS -->
+  <script type="text/javascript"  src="./js/assets/plugin/jquery-2.2.4.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/bootstrap.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/modernizr.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/js.cookie.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/perfect-scrollbar.jquery.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/jquery.fullscreen-min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/switchery.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/jquery.knob.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/bootstrap-slider.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/slick.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/jquery-numerator.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/spin.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/ladda.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/ladda.jquery.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/jquery.bootstrap-touchspin.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/TweenMax.min.js"></script>
+<script type="text/javascript"  src="./js/assets/plugin/flipclock.js"></script>
+<script type="text/javascript"  src="./js/assets/letter-icons.js"></script>
+<script type="text/javascript"  src="./js/assets/windowSize.js"></script>
+<script type="text/javascript"  src="./js/assets/marquee.js"></script>
+<script type="text/javascript"  src="./js/assets/ui.js"></script>
+
+  <!-- start: JavaScript Event Handlers for this page -->
+  <script>
+    jQuery(document).ready(function () {
+      Main.init();
+    });
+
+    $("input[name='multiple']").TouchSpin({
+      initval: 1
+    });
+  </script>
+  <!-- end: JavaScript Event Handlers for this page -->
 </body>
 
 </html>
